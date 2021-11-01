@@ -1,0 +1,62 @@
+:root {
+    --sprite-width: 1163px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.run {
+    position: relative;
+    bottom: -555px;
+    left: 150px;    
+    width: calc(var(--sprite-width) /10);
+    height: 200px;
+    background: url(sprites/female/running.png) repeat-x;
+    animation: animate 0.5s steps(10) infinite;
+}
+.idle {
+    position: relative;
+    bottom: -555px;
+    left: 150px;    
+    width: calc(var(--sprite-width) /10);
+    height: 200px;
+    background: url(sprites/female/idle.png) repeat-x;
+    animation: animate 0.5s steps(10) infinite;
+}
+
+.backgroundDinamic {
+    margin: 20px auto;
+    position: relative;
+    background: url(background.png) repeat-x;
+    width: 1200px;
+    height: 820px;
+    animation: movebg 4.5s linear infinite;
+}
+
+.backgroundStatic {
+    margin: 20px auto;
+    position: relative;
+    background: url(background.png);
+    width: 1200px;
+    height: 820px;
+}
+
+
+
+@keyframes animate
+{
+    from
+    {
+        background-position: 0;
+    }
+    to{
+        background-position:calc(var(--sprite-width)* -1);
+    }
+}
+
+@keyframes movebg {
+    0% { background-position:2069px }
+    100% { background-position:0 }
+  }
+
